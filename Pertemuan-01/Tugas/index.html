@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tugas Praktikum PBP B1 01</title>
+</head>
+<body>
+    <!-- Buat Tag Form -->
+     <form id="productform">
+        <!-- Nama Produk -->
+        <div class="form-group">
+            <label for="productName">Nama Produk</label>
+            <input type="text" id="productName" name="productName" minlength="5" maxlength="30" required>
+            <span class="error-message">*Nama Produk Harus diisi 5-30 karakter.</span>
+        </div>
+        <!-- Deskripsi Produk -->
+        <div class="form-group">
+            <label for="productDescripstion">Deskripsi Produk</label>
+            <input type="text" id="productDescripstion" name="productDescripstion" minlength="5" maxlength="100" required>
+            <span class="error-message">*Deskripsi Produk Harus diisi 5-100 karakter.</span>
+        </div>
+        <!-- Kategori Produk -->
+        <div class="form-group">
+            <label for="category">Kategori</label>
+            <select id="category" name="category" required>
+                <option value="">-- Pilihan Kategori --</option>
+                <option value="baju">Baju</option>
+                <option value="elektronik">Elektronik</option>
+                <option value="alattulis">Alat Tulis</option>
+            </select>
+            <span class="error-message">*Kategori harus dipilih.</span>
+        </div>
+         <!-- Sub Kategori Produk -->
+        <div class="form-group">
+            <label for="subcategory">Sub Kategori:</label>
+            <select id="subcategory" name="subcategory" required disabled>
+                <option value="">-- Pilihan Sub Kategori --</option>
+            </select>
+            <span class="error-message">*Sub Kategori harus dipilih</span>
+        </div>
+        <!-- Harga Produk -->
+        <div class="form-group">
+            <label for="price">Harga Produk:</label>
+            <input type="number" id="price" name="price" min="0" required>
+            <span class="error-message">*Harga produk harus diisi.</span>
+        </div>
+        <!-- Radio Grosir -->
+        <div class="form-group">
+            <label for="grosir">Grosir:</label>
+            <input type="radio" id="grosiryes" name="grosir" value="ya" required>Ya
+            <input type="radio" id="grosirno" name="grosir" value="tidak" required>Tidak
+            <span class="error-message">*Pilih grosir atau tidak.</span>
+        </div>
+        <!-- Harga Grosir -->
+        <div class="form-group">
+            <label for="hargagrosir">Harga Grosir:</label>
+            <input type="number" id="hargagrosir" name="hargagrosir" min="0" disabled>
+            <span class="error-message">*Harga grosir harus diisi jika memilih grosir.</span>
+        </div>
+        <!-- Check Menu Jasa Pengiriman -->
+        <div class="form-group">
+            <label>Jasa Kirim:</label>
+            <p><input type="checkbox" name="jasakirim" value="jne"> JNE</p>
+            <p><input type="checkbox" name="jasakirim" value="pos"> Pos Indonesia</p>
+            <p><input type="checkbox" name="jasakirim" value="j&t"> J&T</p>
+            <p><input type="checkbox" name="jasakirim" value="ninja"> Ninja Exspress</p>
+            <p><input type="checkbox" name="jasakirim" value="tiki"> Tiki</p>
+            <p><input type="checkbox" name="jasakirim" value="sicepat"> Sicepat</p>
+            <span class="error-message" id="jasakirimError">*Pilih minimal 3 jasa kirim.</span>
+        </div>
+        
+        <!-- Captcha -->
+        <div class="form-group">
+            <label for="captcha">Captcha:<span id="captchatext"></span></label>
+            <input type="text" id="captcha" name="captcha" minlength="5" maxlength="5" required>
+            <span class="error-message">*Captcha harus sesuai.</span>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset" id="resetButton">Reset</button>
+     </form>
+     <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Form Container */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Checkbox and Radio Button */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Warna hijau untuk input yang valid */
+input.valid {
+    border: 2px solid #28a745; /* Hijau */
+}
+
+/* Warna merah untuk input yang tidak valid */
+input.invalid {
+    border: 2px solid #dc3545; /* Merah */
+}
+
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+/* Show error message for invalid input */
+input:invalid + .error-message,
+select:invalid + .error-message,
+input:required:invalid + .error-message {
+    display: block;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    background-color: #00ddff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#resetButton {
+    background-color: #ff6347; /* Ganti warna tombol reset jika diinginkan */
+}
