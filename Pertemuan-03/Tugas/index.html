@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Form Pendaftaran Siswa</h2>
+    
+    <form action="process.php" method="POST">
+        <!-- NIS -->
+        <div class="form-group">
+            <label for="nis">NIS:</label>
+            <input type="text" id="nis" name="nis" maxlength="10" required>
+        </div>
+
+        <!-- Nama -->
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+
+        <!-- Jenis Kelamin -->
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="male" name="jenis_kelamin" value="Laki-laki" required> Laki-laki
+            <input type="radio" id="female" name="jenis_kelamin" value="Perempuan" required> Perempuan
+        </div>
+
+        <!-- Kelas -->
+        <div class="form-group">
+            <label for="kelas">Kelas:</label>
+            <select id="kelas" name="kelas" required onchange="toggleEkstrakurikuler()">
+                <option value="">Pilih Kelas</option>
+                <option value="X">X</option>
+                <option value="XI">XI</option>
+                <option value="XII">XII</option>
+            </select>
+        </div>
+
+        <!-- Ekstrakurikuler (Checkbox) -->
+        <div class="form-group hidden" id="ekstrakurikulerSection">
+            <label>Ekstrakurikuler (Minimal 1, Maksimal 3):</label>
+            <input type="checkbox" id="pramuka" name="ekstrakurikuler[]" value="Pramuka"> Pramuka<br>
+            <input type="checkbox" id="basket" name="ekstrakurikuler[]" value="Basket"> Basket<br>
+            <input type="checkbox" id="paskibra" name="ekstrakurikuler[]" value="Paskibra"> Paskibra<br>
+            <input type="checkbox" id="futsal" name="ekstrakurikuler[]" value="Futsal"> Futsal<br>
+            <input type="checkbox" id="pmr" name="ekstrakurikuler[]" value="PMR"> PMR
+        </div>
+
+        <!-- Tombol -->
+        <div class="form-group">
+            <button type="submit" id="submitBtn">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
